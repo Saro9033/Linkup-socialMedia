@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Header from './Components/Header';
+import Login from './Components/Login';
+import Home from './Components/Home';
+import { useStateValue } from './Context/StateProvider';
+import { DataProvider } from './Context/dataContext';
+import FrItems from './Components/Friends/FrItems';
+import Video from './Components/Video/Video';
+import Market from './Components/MarketPlace/Market';
+import Group from './Components/Groups/Group';
+import { useState } from 'react';
 
 function App() {
-  return (
+  const [{ user }, dispatch] = useStateValue();
+  const [dark, setDark] = useState(false)
+
+   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!user ? <Login dispatch={dispatch}/> : (
+          <>
+          <DataProvider>
+            <Header dark={dark} setDark={setDark}/>
+            <Routes > 
+            <Route path='/' element={<Home/>} />
+              <Route path='/friends' element={<FrItems/>} />
+              <Route path='/video' element={<Video/>} />
+              <Route path='/market' element={<Market/>} />
+              <Route path='/groups' element={<Group/>} />
+            </Routes>
+            </DataProvider>
+          </>
+        )}
     </div>
   );
 }
