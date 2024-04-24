@@ -68,7 +68,7 @@ const VideoCards = ({ youtubeLink }) => {
                                 <div className="post_topInfo mx-2">
                                     <h3 style={{ fontSize: 'small', margin: '0' }}>
                                         <strong> username </strong>
-                                        <a href="#" style={{ textDecoration: 'none', fontSize: '11px', margin: '0 4px' }}><strong> Follow </strong></a>
+                                        <button style={{background:'white', textDecoration: 'none',border:'none',color:'blue', fontSize: '11px', margin: '0 4px' }}><strong> Follow </strong></button>
                                     </h3>
                                     <p style={{ fontSize: '10px', margin: '0', color: 'gray' }}>
                                         formattedDate
@@ -82,7 +82,7 @@ const VideoCards = ({ youtubeLink }) => {
 
                     <div className='center d-flex flex-column'>
                         <p className='my-1'> Description here</p>
-                        <iframe
+                        <iframe rel="preload" as="font"  type="font/woff2" crossOrigin="anonymous"
                             className="embed-responsive-item"
                             src={`${youtubeLink}?modestbranding=1&controls=0`}
                             title="YouTube video player"

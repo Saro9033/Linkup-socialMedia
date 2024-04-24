@@ -17,7 +17,7 @@ function App() {
 
    return (
     <div className="App">
-      {!user ? <Login dispatch={dispatch}/> : (
+     {/*  {!user ? <Login dispatch={dispatch}/> : ( */}
           <>
           <DataProvider>
             <Header dark={dark} setDark={setDark}/>
@@ -30,7 +30,7 @@ function App() {
             </Routes>
             </DataProvider>
           </>
-        )}
+   
     </div>
   );
 }

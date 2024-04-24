@@ -13,17 +13,19 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+
+import droneImg from '../../Images/dron.jpg'
 const Market = () => {
   return (
     <div>
    <div className='row m-0  '>
         <div className='col-4 pt-2 px-2 d-none d-md-block d-sm-none' style={{ background: 'rgb(255,255,255)', height:'100vh',position:'fixed', overflowY: 'auto' }}>
           <div className='mx-2 mt-2 d-flex align-items-center justify-content-between'>
-            <h4 className='text-dark m-0'><strong c>MarketPlace</strong></h4>
+            <h4 className='text-dark m-0'><strong >MarketPlace</strong></h4>
             <div style={{ background: 'rgb(228,230,235)' }} className='rounded-5 p-1'><SettingsRoundedIcon style={{ color: 'black' }} /></div> 
           </div>
           <div className='friendsMenu my-3'>
-            <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div className='p-1 bg-primary rounded-5'><StorefrontIcon style={{ color: 'white' }} /> </div><strong className='px-3'>Browse all</strong> </button>
+            <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div className='p-1 rounded-5'style={{background:"#FD5056", color:'white'}}><StorefrontIcon style={{ color: 'white' }} /> </div><strong className='px-3'>Browse all</strong> </button>
             <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div style={{ background: 'rgb(228,230,235)' }} className='p-1 rounded-5'><NotificationsRoundedIcon style={{ color: 'black' }} /> </div><strong className='px-3'>Notifications</strong> </button>
             <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div style={{ background: 'rgb(228,230,235)' }} className='p-1 rounded-5'><InboxIcon style={{ color: 'black' }} /> </div><strong className='px-3'>Inbox</strong> </button>
             <button className=' w-100 p-2 align-items-center d-flex p-0 btn justify-content-between'>
@@ -36,13 +38,13 @@ const Market = () => {
           </div>
 
           <button className='btn w-100 text-center' 
-          style={{border:'none', outline:'none', background:'rgb(235,245,255)',  fontWeight:'bold', color:'rgb(69,142,223)'}}>
+          style={{border:'none', outline:'none', background:'rgb(235,245,255)',  fontWeight:'bold',background:"#FD5056", color:'white'}}>
             <AddIcon/> Create new listing </button>
 
             <div className='marketLink p-2 my-2 border-top border-bottom'>
                 <div className='py-2'>
                      <strong>Filters</strong>
-                     <p className='m-0 my-1'> <a href="#" style={{textDecoration:'none', fontWeight:'bold'}} className='text-center w-100'> Chennai, TamilNadu</a></p>
+                     <p className='m-0 my-1'> <button  style={{textDecoration:'none', fontWeight:'bold'}} className='text-center w-100'> Chennai, TamilNadu</button></p>
                 </div>
             </div>
             <strong className='px-2 my-4'>Categories</strong>
@@ -66,7 +68,7 @@ const Market = () => {
           <h5> <strong>Today's Picks</strong></h5> : 
           <h5> <strong>Market Place</strong></h5> }
           {window.innerWidth > 800 ?
-            <a href='#'>Chennai </a> :
+            <button style={{border:'none', color:'blue', textDecoration:'underline', backgroundColor:'rgb(240,242,245)'}} href='#'>Chennai </button> :
             <button data-bs-toggle="offcanvas" data-bs-target="#search" className=' btn rounded-circle' style={{ backgroundColor: 'rgb(228, 232, 235)' }}>
             <i className='fa fa-search' />
           </button> 
@@ -75,54 +77,49 @@ const Market = () => {
             </div> 
 
        {window.innerWidth > 800 ?    <div className='d-flex justify-content-center flex-wrap w-100'>
-            <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
+            <MartketCards  profileImg={droneImg}
              price="2,550" name="Drone with HD Camera"  location="KPM" />
-             
-            <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
+             <MartketCards  profileImg={droneImg}
              price="2,550" name="Drone with HD Camera"  location="KPM" />
-             
-            <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
+              <MartketCards  profileImg={droneImg}
              price="2,550" name="Drone with HD Camera"  location="KPM" />
-             
-            <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
-             price="2,550" name="Drone with HD Camera" />
-                  
-             <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
+              <MartketCards  profileImg={droneImg}
              price="2,550" name="Drone with HD Camera"  location="KPM" />
-             
-            <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
-             price="2,550" name="Drone with HD Camera" />        
+              <MartketCards  profileImg={droneImg}
+             price="2,550" name="Drone with HD Camera"  location="KPM" />
+              <MartketCards  profileImg={droneImg}
+             price="2,550" name="Drone with HD Camera"  location="KPM" />       
           </div>
 : 
 <> 
 <div className='w-100 d-flex'>
   <div style={{width:'50%'}}>
-  <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
-             price="2,550" name="Drone with HD Camera" /> 
+  <MartketCards  profileImg={droneImg}
+             price="2,550" name="Drone with HD Camera"  location="KPM" />
   </div>
   <div  style={{width:'50%'}}>
-  <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
-             price="2,550" name="Drone with HD Camera" /> 
+  <MartketCards  profileImg={droneImg}
+             price="2,550" name="Drone with HD Camera"  location="KPM" />
   </div>
 </div>
 <div className='w-100 d-flex'>
   <div style={{width:'50%'}}>
-  <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
-             price="2,550" name="Drone with HD Camera" /> 
+  <MartketCards  profileImg={droneImg}
+             price="2,550" name="Drone with HD Camera"  location="KPM" />
   </div>
   <div  style={{width:'50%'}}>
-  <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
-             price="2,550" name="Drone with HD Camera" /> 
+  <MartketCards  profileImg={droneImg}
+             price="2,550" name="Drone with HD Camera"  location="KPM" /> 
   </div>
 </div>
 <div className='w-100 d-flex'>
   <div style={{width:'50%'}}>
-  <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
-             price="2,550" name="Drone with HD Camera" /> 
+  <MartketCards  profileImg={droneImg}
+             price="2,550" name="Drone with HD Camera"  location="KPM" />
   </div>
   <div  style={{width:'50%'}}>
-  <MartketCards  profileImg="https://scontent.fmaa1-4.fna.fbcdn.net/v/t45.5328-4/381622252_6625904580796426_1499965857193304292_n.jpg?stp=c0.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=vgHlI2_RKvcAX_72vLY&_nc_ht=scontent.fmaa1-4.fna&oh=00_AfBE-lf0IjXpalw8rZbYRwNIbIiKyN5Z1BFuySwgd-TrJQ&oe=65338974"
-             price="2,550" name="Drone with HD Camera" /> 
+  <MartketCards  profileImg={droneImg}
+             price="2,550" name="Drone with HD Camera"  location="KPM" /> 
   </div>
 </div>
 

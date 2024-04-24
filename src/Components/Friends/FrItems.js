@@ -9,6 +9,7 @@ import PeopleSharpIcon from '@mui/icons-material/PeopleSharp';
 import FrCards from './FrCards';
 import ChevronRightSharpIcon from '@mui/icons-material/ChevronRightSharp';
 
+import Profile from '../../Images/Profile.webp'
 const FrItems = () => {
   return (
     <div >
@@ -20,7 +21,7 @@ const FrItems = () => {
             <div style={{ background: 'rgb(228,230,235)' }} className='rounded-5 p-1'><SettingsRoundedIcon style={{ color: 'black' }} /></div> 
           </div>
           <div className='friendsMenu my-3'>
-            <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div className='p-1 bg-primary rounded-5'><GroupRoundedIcon style={{ color: 'white' }} /> </div><strong className='px-3'>Home</strong> </button>
+            <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div className='p-1 rounded-5' style={{background:"#FD5056", color:'white'}}><GroupRoundedIcon style={{ color: 'white' }} /> </div><strong className='px-3'>Home</strong> </button>
             <button className=' w-100 p-2 align-items-center d-flex p-0 btn justify-content-between'>
               <div className='d-flex align-items-center' > <div className='p-1 rounded-5' style={{ background: 'rgb(228,230,235)' }}> <PersonRemoveSharpIcon style={{ color: 'black' }} /> </div><strong className='px-3'>Friend Request</strong></div>
               <ChevronRightSharpIcon />
@@ -67,12 +68,12 @@ const FrItems = () => {
               }
 
           <div className='d-flex justify-content-center flex-wrap w-100' style={window.innerWidth < 800 ? {flexDirection:'column'} : null }>
-            <FrCards profileImg="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" name="saravanan" />
-            <FrCards profileImg="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" name="saravanan" />
-            <FrCards profileImg="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" name="saravanan" />
-            <FrCards profileImg="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" name="saravanan" />
-            <FrCards profileImg="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" name="saravanan" />
-            <FrCards profileImg="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" name="saravanan" />
+            <FrCards profileImg={Profile} name="saravanan" />
+            <FrCards profileImg={Profile} name="saravanan" />
+            <FrCards profileImg={Profile} name="saravanan" />
+            <FrCards profileImg={Profile} name="saravanan" />
+            <FrCards profileImg={Profile} name="saravanan" />
+            <FrCards profileImg={Profile} name="saravanan" />
 
           </div>
 

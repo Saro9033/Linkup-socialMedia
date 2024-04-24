@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Story from './Story'
 import MsgSenter from './MsgSenter'
 import Post from './Post'
-import db from '../firebase'
+import db from '../firebase/Config'
 import { onSnapshot, collection, query, orderBy } from 'firebase/firestore';
 
 
@@ -48,7 +48,10 @@ useEffect(() => {
    timestamp={post.data.timestamp}
    username={post.data.username}
    image={post.data.image}
-   galleryImage={post.data.galleryImage} />
+   galleryImage={post.data.galleryImage} 
+   post={post}
+   Likes={post.data.Likes}
+   />
 })}
     </div>
   )

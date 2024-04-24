@@ -4,13 +4,14 @@ import VideocamIcon from '@mui/icons-material/Videocam';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import { useStateValue } from '../Context/StateProvider';
-import db, { storage } from '../firebase';
+import db, { storage } from '../firebase/Config';
 import { collection, addDoc } from 'firebase/firestore';
 import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+
 
 const MsgSenter = () => {
 
@@ -125,9 +126,9 @@ const MsgSenter = () => {
                         </button>
                     </div>
                     <div className="modal-body">
-                        <div className='d-flex align-items-center'> <Avatar src={user.photoURL} />
+                        <div className='d-flex align-items-center'> <Avatar src={user?.photoURL} />
                             <div className='px-2'>
-                                <h6 className='m-0 p-0'>{user.displayName}</h6>
+                                <h6 className='m-0 p-0'>{user?.displayName}</h6>
                                 <div className=' mt-1 rounded-2 p-1 d-flex justtify-content-between align-items-center' style={{ backgroundColor: 'rgb(228,230,235)' }}>
                                     <PeopleRoundedIcon fontSize='verysmall' />
                                     <h6 style={{ fontSize: '12px' }} className='px-1 py-0 m-0'>Friends</h6>
@@ -161,7 +162,7 @@ const MsgSenter = () => {
                     
                     </div>
                     <div className="modal-footer">
-                        <button disabled={!input} type="button" className="btn btn-primary w-100" onClick={handleSubmit} data-dismiss="modal">
+                        <button disabled={!input} style={{background:'#FD5056'}} type="button" className="btn   w-100" onClick={handleSubmit} data-dismiss="modal">
                             Post
                         </button>
                         {/* Add additional buttons or actions here */}
@@ -205,7 +206,7 @@ const MsgSenter = () => {
         {window.innerWidth > 800 ?
             <div className='msgSender d-none d-md-block'>
                 <div className='msg_top'>
-                    <Avatar src={user.photoURL} />
+                    <Avatar src={user?.photoURL} />
                     <form onClick={openModal} style={{ cursor: 'pointer' }}>
                         <input style={{ cursor: 'pointer' }} type="text" className='msg_input' placeholder={`What's on your mind ${user ? user.displayName : ''} ?`} />
                     </form>
@@ -228,7 +229,7 @@ const MsgSenter = () => {
             </div> :
             <div className='bg-white mt-1 w-100' style={{ width: '100vw' }}>
                 <div className='msg_top w-100'>
-                    <Avatar src={user.photoURL} />
+                    <Avatar src={user?.photoURL} />
                     <form onClick={openModal} style={{ cursor: 'pointer' }} className='d-flex align-items-center'>
                         <input style={{ fontSize: '10px' }} value={input} onChange={(e) => setInput(e.target.value)} type="text" className='msg_input' placeholder={`What's on your mind? ${user ? user.displayName : ''}`} />
                         <button onClick={handleSubmit} type='submit'>Hidden buton</button>

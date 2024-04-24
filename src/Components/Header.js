@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Avatar } from '@mui/material'
 import { useStateValue } from '../Context/StateProvider';
 import WestIcon from '@mui/icons-material/West';
+import fbLogo from '../Images/fblogo.png'
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
@@ -57,8 +58,10 @@ const Header = ({dark, setDark}) => {
             {window.innerWidth > 800 ?
 
               <div className="d-none d-md-flex d-md-block">
-                <i className="fa-brands fa-facebook" style={{ color: '#005eff', fontSize: '40px', paddingRight: '10px' }} />
-                <button onClick={handleSearchButtonClick} className='mx-1 btn rounded-circle' style={{ backgroundColor: 'rgb(240, 242, 245)' }}>
+               <div className='d-flex align-items-center'>
+                 <img className='rounded-circle' style={{objectFit:'contain',height:'60px',width:'60px'}} src={fbLogo} alt="" />
+               <h2 className='px-1' style={{color:'#FD5056'}}>LinkUp</h2></div> 
+                <button onClick={handleSearchButtonClick} className='mx-1 btn rounded-circle' style={{alignSelf:'center', backgroundColor: 'rgb(240, 242, 245)' }}>
                   <i className='fa fa-search' />
                 </button>
 
@@ -89,7 +92,8 @@ const Header = ({dark, setDark}) => {
 
 
               </div>
-              : <img src={FBICON} width='130px' alt='fbicon' style={{ background: 'white' }} />
+              :  <div  className='d-flex align-items-center'> <img className='rounded-circle' style={{objectFit:'contain',height:'30px',width:'30px'}} src={fbLogo} alt="" />
+              <h4 className='px-1 m-0' style={{color:'#FD5056'}}>LinkUp</h4></div> 
             }
             {window.innerWidth < 800 ?
               <div >
@@ -107,19 +111,19 @@ const Header = ({dark, setDark}) => {
         </div>
 
         <div className='d-flex align-items-center middle justify-content-between col-12 col-lg-6 col-md-3 p-0'>
-          <div className='Menuicons' style={(actHome && window.innerWidth > 600) ? { borderBottom: '3px rgb(8,102,255) solid' } : null}>  <Link to='/' className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle1}>  {actHome ? <HomeRoundedIcon fontSize='medium' style={{ color: 'rgb(8,102,255)' }} /> : <HomeOutlinedIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</Link> </div>
-          <div className='Menuicons' style={actFriend && window.innerWidth > 600 ? { borderBottom: '3px rgb(8,102,255) solid' } : null}>  <Link to='/friends' className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle2}>  {actFriend ? <PeopleRoundedIcon fontSize='medium' style={{ color: 'rgb(8,102,255)' }} /> : <PeopleOutlineIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />} </Link>   </div>
+          <div className='Menuicons' style={(actHome && window.innerWidth > 600) ? { borderBottom: '3px #FD5056 solid' } : null}>  <Link to='/' className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle1}>  {actHome ? <HomeRoundedIcon fontSize='medium' style={{ color: '#FD5056' }} /> : <HomeOutlinedIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</Link> </div>
+          <div className='Menuicons' style={actFriend && window.innerWidth > 600 ? { borderBottom: '3px #FD5056 solid' } : null}>  <Link to='/friends' className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle2}>  {actFriend ? <PeopleRoundedIcon fontSize='medium' style={{ color: '#FD5056' }} /> : <PeopleOutlineIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />} </Link>   </div>
           {window.innerWidth < 800 ?
-            <div className='Menuicons' style={actMess && window.innerWidth > 600 ? { borderBottom: '3px rgb(8,102,255) solid' } : null}>  <button className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle6}>  {actMess ? <MessageIcon fontSize='medium' style={{ color: 'rgb(8,102,255)' }} /> : <MessageIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</button>   </div>
+            <div className='Menuicons' style={actMess && window.innerWidth > 600 ? { borderBottom: '3px #FD5056 solid' } : null}>  <button className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle6}>  {actMess ? <MessageIcon fontSize='medium' style={{ color: '#FD5056' }} /> : <MessageIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</button>   </div>
             : null}
-          <div className='Menuicons' style={actVideo && window.innerWidth > 600 ? { borderBottom: '3px rgb(8,102,255) solid' } : null}>  <Link to='/video' className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle3}>  {actVideo ? <VideoRoundedIcon fontSize='medium' style={{ color: 'rgb(8,102,255)' }} /> : <OndemandVideoIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</Link>   </div>
-          <div className='Menuicons' style={actMarket && window.innerWidth > 600 ? { borderBottom: '3px rgb(8,102,255) solid' } : null}>  <Link to='/market' className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle4}>  {actMarket ? <StoreRoundedIcon fontSize='medium' style={{ color: 'rgb(8,102,255)' }} /> : <StorefrontIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</Link>   </div>
+          <div className='Menuicons' style={actVideo && window.innerWidth > 600 ? { borderBottom: '3px #FD5056 solid' } : null}>  <Link to='/video' className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle3}>  {actVideo ? <VideoRoundedIcon fontSize='medium' style={{ color: '#FD5056' }} /> : <OndemandVideoIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</Link>   </div>
+          <div className='Menuicons' style={actMarket && window.innerWidth > 600 ? { borderBottom: '3px #FD5056 solid' } : null}>  <Link to='/market' className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle4}>  {actMarket ? <StoreRoundedIcon fontSize='medium' style={{ color: '#FD5056' }} /> : <StorefrontIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</Link>   </div>
           {window.innerWidth < 800 ?
-            <div className='Menuicons' style={actNoti && window.innerWidth > 600 ? { borderBottom: '3px rgb(8,102,255) solid' } : null}>  <button className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle7}>  {actNoti ? <NotificationsRoundedIcon fontSize='medium' style={{ color: 'rgb(8,102,255)' }} /> : <NotificationsRoundedIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</button>   </div>
+            <div className='Menuicons' style={actNoti && window.innerWidth > 600 ? { borderBottom: '3px #FD5056 solid' } : null}>  <button className='btn' style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} onClick={handle7}>  {actNoti ? <NotificationsRoundedIcon fontSize='medium' style={{ color: '#FD5056' }} /> : <NotificationsRoundedIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</button>   </div>
             : null}
-          <div className='Menuicons' style={actGrp && window.innerWidth > 600 ? { borderBottom: '3px rgb(8,102,255) solid' } : null}> {window.innerWidth < 600 ?
+          <div className='Menuicons' style={actGrp && window.innerWidth > 600 ? { borderBottom: '3px #FD5056 solid' } : null}> {window.innerWidth < 600 ?
             null
-            : <Link to='/groups' className='btn' onClick={handle5} style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} >  {actGrp ? <GroupsRoundedIcon fontSize='medium' style={{ color: 'rgb(8,102,255)' }} /> : <GroupsOutlinedIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</Link>
+            : <Link to='/groups' className='btn' onClick={handle5} style={window.innerWidth < 600 ? { padding: '10px 12px' } : { padding: '10px 30px' }} >  {actGrp ? <GroupsRoundedIcon fontSize='medium' style={{ color: '#FD5056' }} /> : <GroupsOutlinedIcon fontSize='medium' style={{ color: 'rgb(101,103,107)' }} />}</Link>
           }</div>
         </div>
 
@@ -130,7 +134,7 @@ const Header = ({dark, setDark}) => {
               <button className='btn m-1 rounded-circle p-1' style={{ backgroundColor: 'rgb(216,218,223)', color: 'black' }}> <AppsOutlinedIcon fontSize='medium' /> </button>
               <button className='btn m-1 rounded-circle p-1' style={{ backgroundColor: 'rgb(216,218,223)', color: 'black' }}> <NotificationsRoundedIcon fontSize='medium' /> </button>
               <div className="profile">
-                <Avatar src={user.photoURL} />
+                <Avatar src={user?.photoURL} />
               </div>
             </div> : null}
 
@@ -146,9 +150,9 @@ const Header = ({dark, setDark}) => {
             </div>
             <div className="offcanvas-body py-0">
               <div className='top d-flex align-items-center'>
-                <Avatar style={{ marginRight: '6px' }} src={user.photoURL} />
+                <Avatar style={{ marginRight: '6px' }} src={user?.photoURL} />
                 <div>
-                  <h5 className='p-0 m-0'>{user.displayName}</h5>
+                  <h5 className='p-0 m-0'>{user?.displayName}</h5>
                   <span className='p-0 m-0' style={{ color: '#71706e', fontSize: '0.8rem' }}>View your profile</span>
                 </div>
               </div>

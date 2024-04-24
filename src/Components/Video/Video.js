@@ -20,7 +20,7 @@ const Video = () => {
             <div style={{ background: 'rgb(228,230,235)' }} className='rounded-5 p-1'><SettingsRoundedIcon style={{ color: 'black' }} /></div> 
           </div>
           <div className='friendsMenu my-3'>
-            <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div className='p-1 bg-primary rounded-5'><YouTubeIcon style={{ color: 'white' }} /> </div><strong className='px-3'>Home</strong> </button>
+            <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div className='p-1 rounded-5' style={{background:"#FD5056", color:'white'}}><YouTubeIcon style={{ color: 'white' }} /> </div><strong className='px-3'>Home</strong> </button>
             <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div style={{ background: 'rgb(228,230,235)' }} className='p-1 rounded-5'><VideocamIcon style={{ color: 'black' }} /> </div><strong className='px-3'>Live</strong> </button>
             <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div style={{ background: 'rgb(228,230,235)' }} className='p-1 rounded-5'><img width='22px' alt='' src={reels} style={{ color: 'black' }} /> </div><strong className='px-3'>Reels</strong> </button>
             <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div style={{ background: 'rgb(228,230,235)' }} className='p-1 rounded-5'><MovieSharpIcon style={{ color: 'black' }} /> </div><strong className='px-3'>Shows</strong> </button>

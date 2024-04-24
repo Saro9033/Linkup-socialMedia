@@ -26,21 +26,21 @@ const Group = () => {
             <div style={{ background: 'rgb(228,230,235)' }} className='rounded-5 p-1'><SettingsRoundedIcon style={{ color: 'black' }} /></div> 
           </div>
           <div className='friendsMenu my-3'>
-            <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div className='p-1 bg-primary rounded-5'><FeedIcon style={{ color: 'white' }} /> </div><strong className='px-3'>Your Feed</strong> </button>
+            <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div className='p-1 rounded-5'style={{background:"#FD5056", color:'white'}}><FeedIcon style={{ color: 'white' }} /> </div><strong className='px-3'>Your Feed</strong> </button>
             <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div style={{ background: 'rgb(228,230,235)' }} className='p-1 rounded-5'><ExploreIcon style={{ color: 'black' }} /> </div><strong className='px-3'>Discovery</strong> </button>
             <button className=' w-100 p-2 align-items-center d-flex p-0 btn'> <div style={{ background: 'rgb(228,230,235)' }} className='p-1 rounded-5'><GroupsIcon style={{ color: 'black' }} /> </div><strong className='px-3'>Your Groups</strong> </button>
      
           </div>
 
           <button className='btn w-100 text-center mb-3' 
-          style={{border:'none', outline:'none', background:'rgb(235,245,255)',  fontWeight:'bold', color:'rgb(69,142,223)'}}>
+          style={{border:'none', outline:'none', background:"#FD5056", color:'white',  fontWeight:'bold'}}>
             <AddIcon/> Create New Groups </button>
             
             
             <div className='border-top'>           
                  <p className='px-2 py-3 d-flex justify-content-between align-items-center'>
                      <strong >Groups You've Joined</strong>
-                     <a href="#" style={{textDecoration:'none'}}>See all</a>
+                     <a href="#" style={{textDecoration:'none', color:'#FD5056'}}>See all</a>
                      </p>
                <div style={{paddingBottom:'100px'}}> 
                     {SideItems.map(item =>{

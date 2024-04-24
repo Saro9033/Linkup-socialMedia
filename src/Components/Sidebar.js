@@ -24,7 +24,7 @@ const Sidebar = () => {
   return (
     <div className="w-25 d-none d-sm-none d-md-block" 
     style={{background:'rgb(240,242,245)',overflowY:'auto', height:'100vh', paddingBottom:'10%',position:'fixed'}}>
-       <SidebarRow title={user.displayName} src={user.photoURL}/>
+       <SidebarRow title={user?.displayName} src={user?.photoURL}/>
         <SidebarRow title="Friends" Icon={PeopleRoundedIcon}/>
         <SidebarRow title="Memories" Icon={RestoreIcon}/>
         <SidebarRow title="Saved"  Icon={BookmarkIcon}/>
@@ -50,9 +50,9 @@ const Sidebar = () => {
         <button className='py-2 d-flex px-3 Menubutt w-100' onClick={()=>setExpand(!expand)} style={{border:'none', outline:'none', paddingRight:'9px'}}>
           { !expand 
           ? 
-          <div > <ExpandMoreIcon className='rounded-circle' style={{ color:'rgb(8,102,255)', background:'rgb(216,218,223)', fontSize:'28px'}} /> See more  </div> 
+          <div > <ExpandMoreIcon className='rounded-circle' style={{ color:'#FD5056', background:'rgb(216,218,223)', fontSize:'28px'}} /> See more  </div> 
            : 
-           <div> <ExpandLessIcon className='rounded-circle' style={{ color:'rgb(8,102,255)',background:'rgb(216,218,223)', fontSize:'28px'}} /> See less  </div>
+           <div> <ExpandLessIcon className='rounded-circle' style={{ color:'#FD5056',background:'rgb(216,218,223)', fontSize:'28px'}} /> See less  </div>
           }
          </button>
 
